@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroUsuarioController">
+   <top>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="pane-default" BorderPane.alignment="CENTER">
+         <bottom>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" styleClass="button-client" text="Salvar" textAlignment="CENTER" BorderPane.alignment="BOTTOM_RIGHT">
+               <BorderPane.margin>
+                  <Insets bottom="12.0" right="12.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="64.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnVoltar" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnVoltar" styleClass="button-client" text="Voltar" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="TOP_CENTER" layoutX="860.0" styleClass="lbl-exit" text="x" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="51.0" layoutY="202.0" prefHeight="70.0" prefWidth="400.0" style="-fx-border-color: black;">
+               <children>
+                  <ComboBox fx:id="cbxDia" layoutX="14.0" layoutY="20.0" prefHeight="30.0" prefWidth="90.0" promptText="..." visibleRowCount="5" />
+                  <ComboBox fx:id="cbxMes" layoutX="138.0" layoutY="20.0" prefHeight="30.0" prefWidth="125.0" promptText="Selecione..." visibleRowCount="5" />
+                  <ComboBox fx:id="cbxAno" layoutX="296.0" layoutY="20.0" prefHeight="30.0" prefWidth="90.0" promptText="..." visibleRowCount="5" />
+               </children>
+            </Pane>
+            <TextField fx:id="txtNomeCompleto" layoutX="50.0" layoutY="56.0" prefWidth="400.0" promptText="Nome Completo">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtEmail" layoutX="50.0" layoutY="118.0" prefWidth="400.0" promptText="E-mail">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Separator layoutX="504.0" layoutY="28.0" orientation="VERTICAL" prefHeight="350.0" />
+            <Label alignment="CENTER" layoutX="50.0" layoutY="178.0" prefHeight="18.0" prefWidth="400.0" text="Data Nascimento" textAlignment="CENTER" />
+            <HBox alignment="CENTER" layoutX="51.0" layoutY="291.0" prefHeight="25.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radioNomeMae" alignment="CENTER_LEFT" mnemonicParsing="false" selected="true" text="Nome da Mãe" textAlignment="CENTER">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="perguntaSegur" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="radioApelidoInfan" mnemonicParsing="false" text="Apelido de Infância" textAlignment="CENTER" toggleGroup="$perguntaSegur" />
+                  <RadioButton fx:id="radioNumCasa" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Nº da Casa" textAlignment="CENTER" toggleGroup="$perguntaSegur" />
+               </children>
+            </HBox>
+            <TextField fx:id="txtPalavraSeg" layoutX="51.0" layoutY="337.0" prefWidth="400.0" promptText="Palavra de Segurança">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <VBox layoutX="552.0" layoutY="48.0" prefHeight="200.0" prefWidth="300.0" spacing="40.0">
+               <children>
+                  <JFXTextField fx:id="txtUsuario" focusColor="MIDNIGHTBLUE" labelFloat="true" prefWidth="300.0" promptText="Usuário" unFocusColor="BLACK">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtSenha" focusColor="MIDNIGHTBLUE" labelFloat="true" prefWidth="300.0" promptText="Senha" unFocusColor="BLACK">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtConfirmaSenha" focusColor="MIDNIGHTBLUE" labelFloat="true" prefWidth="300.0" promptText="Confirmar Senha" unFocusColor="BLACK">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+               </children>
+            </VBox>
+            <Pane layoutX="552.0" layoutY="254.0" prefHeight="120.0" prefWidth="300.0" style="-fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="imgUsuario" fitHeight="80.0" fitWidth="80.0" layoutX="28.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button alignment="CENTER" layoutX="166.0" layoutY="68.0" mnemonicParsing="false" onAction="#carregarImagem" styleClass="button-login" text="Carregar Imagem" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="lblErroCadastro" alignment="CENTER" layoutX="552.0" layoutY="19.0" prefHeight="18.0" prefWidth="300.0" styleClass="label-erroLogin" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

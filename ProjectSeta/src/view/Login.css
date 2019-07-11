@@ -1,0 +1,73 @@
+.pane-default{
+    -fx-background-color: midnightblue;
+    -fx-effect: dropshadow(three-pass-box, black, 3, 0.2, 1, 1.0);
+}
+
+.button-main{
+    -fx-background-color: midnightblue;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-family: arial;
+    -fx-effect: dropshadow( gaussian, black , 3, 0.0, 1, 1.0 );
+    -fx-cursor: hand;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.button-main:hover{
+    -fx-background-color: dodgerBlue;
+}
+
+.button-Logout{
+    -fx-background-color: #CD0000;
+    -fx-effect: dropshadow( gaussian, black, 3, 0.0, 1, 1.0);
+    -fx-cursor: hand;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;	
+}
+
+.button-Logout:hover{
+    -fx-background-color: #EE0000;
+}
+
+.button-login{
+    -fx-background-color: midnightblue;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+.button-login:hover{
+    -fx-background-color: dodgerBlue;
+}
+
+.label-signin:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: dodgerBlue;
+}
+
+.label-erroLogin{
+    -fx-text-fill: red;
+    -fx-font-size: 14;
+}
+
+.button-client{
+    -fx-background-color: midnightblue;
+    -fx-border-color: dodgerBlue;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.button-client:hover{
+    -fx-background-color: dodgerBlue;
+}
+
+.textfield-pesquisar{
+    -fx-text-fill: white;
+}
+
+.lbl-exit:hover{
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, red , 3, 0.0, 1, 1.0 )
+}
